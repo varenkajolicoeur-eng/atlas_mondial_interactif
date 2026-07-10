@@ -1,0 +1,129 @@
+/*====================================
+Reset CSS
+======================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*====================================
+style global
+======================================*/
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333333;
+    min-height: 100vh;
+    padding: 20px;
+}
+/*====================================
+style header
+======================================*/
+header {
+    text-align: center;
+    margin-bottom:40px;
+}
+header h1 {
+    font-size: 2.5rem;
+    color:#2563eb;
+    margin-bottom: 10px;
+}
+header p {
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+/*====================================
+style main
+======================================*/
+main {
+    max-width: 800px;
+    margin: auto;
+}
+/*====================================
+style section recherche
+======================================*/
+.recherche {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+/*====================================
+style form
+======================================*/
+#form-recherche {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+/*====================================
+style label
+======================================*/
+#form-recherche label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #444444;
+}
+/*====================================
+style input
+======================================*/
+#pays {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+#pays:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+}
+#message-erreur {
+    color: #dc2626;
+    font-size: 0.9rem;
+}
+/*====================================
+style button
+======================================*/
+#form-recherche button {
+    align-self: center;
+    padding: 10px 24px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#form-recherche button:hover{
+    background:#1d4ed8;
+}
+/*====================================
+style section resultats
+======================================*/
+.resultats {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+    min-height: 250px;
+}
+.resultats p{
+    text-align:center;
+    color:#666;
+    font-style:italic;
+}
+/*====================================
+style footer
+======================================*/
+footer{
+    text-align:center;
+    margin-top:40px;
+    padding:20px;
+    color:#666666;
+    font-size:.9rem;
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atlas mondial</title>
+    <link rel="stylesheet" href="/CSS/style.css">
 </head>
 
 <body>
@@ -14,16 +15,16 @@
 
     <main>
 
-        <section class=recherche>
-            <form>
+        <section class="recherche">
+            <form id="form-recherche">
                 <label for="pays">Rechercher un pays :</label>
             <input type="text" id="pays" placeholder="Entrez le nom d'un pays" aria-describedby="message-erreur">
             <p id="message-erreur"></p>
-            <button type="submit">Effectuer la recherche</button>
+            <button type="submit">Rechercher</button>
             </form>
         </section>
 
-        <section class="resultats">
+        <section id="resultats" class="resultats">
             <p>Rechercher un pays pour afficher les informations.</p>
         </section>
 
@@ -32,6 +33,7 @@
     <footer>
         &copy; 2026 Atlas mondial
     </footer>
+    <script src="/JS/script.js"></script>
 
 </body>
 </html>
