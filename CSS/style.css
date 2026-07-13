@@ -50,6 +50,11 @@ style section recherche
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
 }
+.recherche h2 {
+    font-size: 1.5rem;
+    color: #1d3557;
+    margin-bottom: 5px;
+}
 /*====================================
 style form
 ======================================*/
@@ -124,6 +129,11 @@ style section resultats
     box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
     min-height: 250px;
 }
+.resultats h3 {
+    font-size: 1rem;
+    color: #1d3557;
+    margin-bottom: 5px;
+}
 #message-resultats {
     text-align:center;
     color:#666;
@@ -143,7 +153,7 @@ footer{
 style carte pays
 ======================================*/
 .carte-pays {
-    background-color: #ffffff;
+    background-color: #f4f4fc;
     border-radius: 12px;
     padding: 1rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
