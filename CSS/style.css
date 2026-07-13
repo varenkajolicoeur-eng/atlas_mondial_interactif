@@ -189,5 +189,16 @@ style responsive
     .conteneur-pays {
         grid-template-columns: 1fr 1fr;
     }
+    .drapeau{
+        width: 250px;
+    }
 }
-
+/* grand ecrans */
+@media screen and (min-width:1440px){
+    .conteneur-pays {
+        grid-template-columns: 1fr 1fr;
+    }
+    .drapeau{
+        width: 300px;
+    }
+}
