@@ -71,6 +71,9 @@ formRecherche.addEventListener("submit", async function(event){
         const infosPays = document.createElement("div");
         infosPays.classList.add("infos-pays");
 
+        const conteneurPays = document.createElement("div");
+        conteneurPays.classList.add("conteneur-pays");
+
         
 
         const drapeau = document.createElement("img");
@@ -78,7 +81,8 @@ formRecherche.addEventListener("submit", async function(event){
         drapeau.src = paysTrouve.flag.url_svg;
         drapeau.alt = `Drapeau de ${paysTrouve.names.common}`;
         drapeauPays.appendChild(drapeau);
-        cartePays.appendChild(drapeauPays);
+        conteneurPays.appendChild(drapeauPays);
+        cartePays.appendChild(conteneurPays);
 
         infosPays.appendChild(creerLigne("Nom officiel", paysTrouve.names.official));
 
@@ -92,7 +96,8 @@ formRecherche.addEventListener("submit", async function(event){
 
         infosPays.appendChild(creerLigne("Langues", `${paysTrouve.languages.map(langue => langue.name).join(", ")}`));
 
-        cartePays.appendChild(infosPays);
+        conteneurPays.appendChild(infosPays);
+        cartePays.appendChild(conteneurPays);
         resultats.appendChild(cartePays);
         
     }

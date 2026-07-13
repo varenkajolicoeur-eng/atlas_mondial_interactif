@@ -168,8 +168,26 @@ style carte pays
     color: #1d3557;
 }
 .drapeau{
-    width: 300px;
+    width: 200px;
     height: auto;
     border-radius: 8px;
     margin-bottom: 1.5rem;
 }
+/*====================================
+style responsive
+======================================*/
+/* tablette */
+@media screen and (min-width:768px){
+    .conteneur-pays {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+/* ordinateur */
+@media screen and (min-width:1024px){
+    .conteneur-pays {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
