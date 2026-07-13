@@ -32,13 +32,30 @@ formRecherche.addEventListener("submit", async function(event){
             }
         }
         );
-        const donnees = await reponse.json();
-        messageChargement.classList.add("hidden");
-        const paysTrouve = donnees.data.objects[0];
-        
-        // Affichage des résultats
+         // Vérification du statut HTTP
+        if (!reponse.ok) {
+        throw new Error("Pays introuvable");
+        }
 
+        const donnees = await reponse.json();
+
+        // Vérification si aucun pays n'a été trouvé
+        if (donnees.data.objects.length === 0) {
+        throw new Error("Pays introuvable");
+        }
+
+        messageChargement.classList.add("hidden");
+
+        const paysTrouve = donnees.data.objects[0];
+
+        // Nettoyer les anciens résultats
         resultats.replaceChildren();
+
+        
+    /* ==================================================================
+        Création des éléments HTML pour afficher les informations du pays
+    =====================================================================*/
+
         // Création de la carte du pays
         const cartePays = document.createElement("article");
         cartePays.classList.add("carte-pays");
@@ -101,13 +118,25 @@ formRecherche.addEventListener("submit", async function(event){
         resultats.appendChild(cartePays);
         
     }
-     catch(error){
-        messageChargement.classList.add("hidden");
+     catch (error) {
 
-        messageErreur.textContent = "Une erreur est survenu lors de la recherche.";
+    messageChargement.classList.add("hidden");
 
-     }
-    
+    resultats.replaceChildren();
+
+    if (error.message === "Pays introuvable") {
+
+        messageErreur.textContent =
+        "Aucun résultat trouvé pour cette recherche. Veuillez vérifier l'orthographe.";
+
+    } else {
+
+        messageErreur.textContent =
+        "Une erreur de connexion est survenue. Veuillez réessayer plus tard.";
+
+    }
+
+    }
    
     
 });
