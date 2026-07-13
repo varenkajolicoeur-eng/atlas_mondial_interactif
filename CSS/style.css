@@ -124,7 +124,7 @@ style section resultats
     box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
     min-height: 250px;
 }
-.resultats p{
+#message-resultats {
     text-align:center;
     color:#666;
     font-style:italic;
@@ -138,4 +138,38 @@ footer{
     padding:20px;
     color:#666666;
     font-size:.9rem;
+}
+/*====================================
+style carte pays
+======================================*/
+.carte-pays {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 700px;
+    margin:auto;
+    text-align: center;
+}
+.carte-pays p{
+    display: flex;
+}
+.carte-pays strong{
+    width: 130px;
+}
+.carte-pays span{
+    flex: 1;
+}
+
+
+.carte-pays h2{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #1d3557;
+}
+.drapeau{
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
 }
