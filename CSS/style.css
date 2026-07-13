@@ -103,6 +103,18 @@ style button
     background:#1d4ed8;
 }
 /*====================================
+style message de chargement
+=====================================*/
+.message-chargement{
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: 600;
+    color:#2563eb;
+}
+.hidden{
+    display: none;
+}
+/*====================================
 style section resultats
 ======================================*/
 .resultats {
