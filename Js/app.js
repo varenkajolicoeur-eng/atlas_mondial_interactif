@@ -13,6 +13,14 @@ const resultats = document.getElementById("resultats");
 formRecherche.addEventListener("submit", async function(event){
 
     event.preventDefault();
+    const pays = inputPays.value.trim();
+    if (pays === ""){ 
+        messageErreur.textContent ="Veuillez saisir le nom d'un pays.";
+        return;
+    }
+    messageErreur.textContent = "";
+    
+   
     
 });
 
